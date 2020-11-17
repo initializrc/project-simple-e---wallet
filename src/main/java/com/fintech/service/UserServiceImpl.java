@@ -44,8 +44,9 @@ public class UserServiceImpl implements UserService {
         user.setUsername(entity.getUsername());
         user.setFullName(entity.getFullName());
         user.setPhoneNumber(entity.getPhoneNumber());
-        user.setType(User.Type.CUSTOMER);
+        user.setType(User.Type.valueOf(entity.getType().toUpperCase()));
         user = userRepository.save(user);
+
 
         BeanUtils.copyProperties(user, entity);
         return entity;
