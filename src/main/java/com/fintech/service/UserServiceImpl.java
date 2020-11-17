@@ -39,6 +39,8 @@ public class UserServiceImpl implements UserService {
         if (userByPhoneNumber != null && userByPhoneNumber.getId() !=null)
             throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, "Phonenumber already exists");
 
+        entity.setType(entity.getType().toUpperCase());
+
         User user = new User();
         user.setEmail(entity.getEmail());
         user.setUsername(entity.getUsername());
