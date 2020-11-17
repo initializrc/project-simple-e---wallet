@@ -26,6 +26,7 @@ public class UserController {
     @PostMapping("/register")
     public UserModel save(@RequestBody @Valid UserRequestModel request, BindingResult result, HttpServletResponse response) throws IOException {
         UserModel userModel = new UserModel();
+        request.setType(request.getType().toUpperCase());
         if (result.hasErrors()) {
             response.sendError(HttpStatus.BAD_REQUEST.value(), result.getAllErrors().toString());
             return userModel;
