@@ -10,7 +10,8 @@ public class FieldValueMatchValidator implements ConstraintValidator<FieldValueM
 
     @Override
     public void initialize(FieldValueMatch constraintAnnotation) {
-
+        this.field = constraintAnnotation.field();
+        this.fieldMatch = constraintAnnotation.fieldMatch();
     }
 
     @Override
