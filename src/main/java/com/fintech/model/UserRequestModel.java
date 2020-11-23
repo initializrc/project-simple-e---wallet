@@ -29,6 +29,9 @@ public class UserRequestModel {
     private String phoneNumber;
 
     @NotBlank
+    private String password;
+
+    @NotBlank
     private String type;
 
 }
