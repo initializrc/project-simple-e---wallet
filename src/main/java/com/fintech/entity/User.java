@@ -7,8 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Where;
 
 
@@ -42,11 +41,11 @@ public class User extends Persistence {
     @Column(length = 25, unique = true)
     private String phoneNumber;
 
-//    @JsonIgnore
-//    @NotNull
-//    @Size(min = 8)
-//    @Column
-//    private String password;
+    @JsonIgnore
+    @NotNull
+    @Size(min = 8)
+    @Column
+    private String password;
 
 
     @Column(length = 20)
