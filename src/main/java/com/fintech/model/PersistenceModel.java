@@ -17,6 +17,7 @@ public class PersistenceModel {
     private Integer id;
 
     private String createdBy;
+
     private String updatedBy;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss", timezone = "GMT+7")
