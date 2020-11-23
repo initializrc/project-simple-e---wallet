@@ -15,6 +15,7 @@ public class UserModel extends PersistenceModel {
     private String username;
     private String fullName;
     private String phoneNumber;
+    private String password;
     private String type;
 
 }
