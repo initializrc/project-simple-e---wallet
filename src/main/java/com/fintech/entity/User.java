@@ -47,10 +47,8 @@ public class User extends Persistence {
     @Column
     private String password;
 
-
     @Column(length = 20)
     @Enumerated(EnumType.STRING)
     private Type type;
-
 
 }
