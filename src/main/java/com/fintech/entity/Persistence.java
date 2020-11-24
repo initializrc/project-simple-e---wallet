@@ -23,8 +23,6 @@ import lombok.Data;
 @Data
 @MappedSuperclass
 public class Persistence implements Serializable {
-
-
     private static final long serialVersionUID = 625652635172981423L;
 
     public enum Status {ACTIVE, NOT_ACTIVE}
