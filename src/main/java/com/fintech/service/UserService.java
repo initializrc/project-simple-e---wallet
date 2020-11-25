@@ -1,6 +1,10 @@
 package com.fintech.service;
 
 import com.fintech.model.UserModel;
+import com.fintech.model.UserRequestModel;
 
-public interface UserService extends PersistenceService<UserModel, Integer> {
+public interface UserService {
+
+    UserModel register(UserRequestModel requestModel);
+
 }
