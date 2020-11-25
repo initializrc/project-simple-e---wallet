@@ -1,8 +1,6 @@
 package com.fintech.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import com.fintech.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +13,6 @@ public class UserModel extends PersistenceModel {
     private String username;
     private String fullName;
     private String phoneNumber;
-    private String password;
     private String type;
 
 }
