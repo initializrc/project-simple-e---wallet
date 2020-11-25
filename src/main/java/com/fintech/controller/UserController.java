@@ -24,14 +24,14 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public UserModel save(@RequestBody @Valid UserRequestModel request, BindingResult result, HttpServletResponse response) throws IOException {
+    public UserModel register (@RequestBody @Valid UserRequestModel request, BindingResult result, HttpServletResponse response) throws IOException {
         UserModel userModel = new UserModel();
         if (result.hasErrors()) {
             response.sendError(HttpStatus.BAD_REQUEST.value(), result.getAllErrors().toString());
             return userModel;
         } else {
             BeanUtils.copyProperties(request, userModel);
-            return userService.register(userModel);
+            return userService.register(request);
         }
     }
 }
